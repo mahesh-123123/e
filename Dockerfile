@@ -1,5 +1,5 @@
-# syntax=docker/dockerfile:1
-FROM ubuntu:18.04
-COPY . /app
-RUN make /app
-CMD python /app/app.py
+FROM alpine:3.4
+
+RUN apk update
+RUN apk add vim
+RUN apk add curl
